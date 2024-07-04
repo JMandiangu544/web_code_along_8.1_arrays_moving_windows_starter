@@ -1,18 +1,26 @@
 function solution(size) {
-  // your code here
-  return "hello world"
+  let matrix = [];
+  for (let i = 0; i < size; i++) {
+    matrix[i] = [];
+    for (let j = 0; j < size; j++) {
+      matrix[i][j] = 0;
+    }
+  }
+
+  // Fill the main diagonal with 1's
+  for (let i = 0; i < size; i++) {
+    matrix[i][i] = 1;
+  }
+
+  return matrix;
 }
 
-// Create a square 2D array of size size x size. Fill the array with 0's.
-// Then draw a line of 1's down the main diagonal.
-// This is called an identity matrix.
-
-// Example
-// Input: size = 4
-// Output: solution(4) =
+// Example usage:
+console.log(solution(4));
+// Output:
 // [
 //   [1, 0, 0, 0],
 //   [0, 1, 0, 0],
 //   [0, 0, 1, 0],
-//   [0, 0, 0, 1],
+//   [0, 0, 0, 1]
 // ]
